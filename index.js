@@ -1,4 +1,4 @@
-/*main module express*/
+/*connecting to database module*/
 const config = require('./config');
 const app = require('./app');
 const database = require('./database');
