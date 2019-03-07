@@ -1,0 +1,39 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    //background-color: lightblue;
+    .container {
+        .content{
+            flex: 3;
+            margin-right: $freeSp;
+            margin-bottom: $freeSp;
+            //padding: $freeSp;
+            min-height: 100px;
+            //border: 1px solid $gr;
+            //background-color: lightcoral;
+        }
+
+        .sidebar {
+            position: relative;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            //background-color: lightblue;
+        
+            .box {
+                margin-bottom: $freeSp;
+                width: 100%;
+                min-height: 100px;
+                padding: #freeSp;
+                border: 1px solid $gr; 
+                //background-color: lightcoral;           
+             }
+        }
+    }
+    @media (max-width: 991px) {
+        .container{
+            flex-direction: column-reverse;
+        }
+    }
+}

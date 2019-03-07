@@ -1,0 +1,43 @@
+.container {
+  align-self: center;
+  display: flex;
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+        
+      } 
+    .sidebar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .box {
+        margin-right: $freeSp;
+      }
+    }
+   }
+
+
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container{
+    flex-direction: column-reverse;
+    width: 100%;
+    }
+    .sidebar {
+      flex-direction: row;
+    }
+  }

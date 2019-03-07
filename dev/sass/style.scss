@@ -1,0 +1,20 @@
+@import "reset","const","grid","typography";
+
+
+html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    color: $blk;
+    background-color: $wht;
+    padding-top: $nomHeight + $freeSp;
+}
+
+@import "header", "content", "foot", "components/post";

@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    height: $nomHeight;
+    border-top: 1px solid $gr;
+    background-color: $wht;
+
+    .container {
+        height: 100%;
+        line-height: $nomHeight;
+        background-color: $wht;
+    }
+}
