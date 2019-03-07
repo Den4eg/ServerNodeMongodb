@@ -1,4 +1,4 @@
-@import "reset","const","grid","typography";
+@import "reset","const","grid","typography", "forms";
 
 
 html {
@@ -13,8 +13,8 @@ body {
     flex-direction: column;
     flex: auto;
     color: $blk;
-    background-color: $wht;
+    background-color: lighten($gr, 7);
     padding-top: $nomHeight + $freeSp;
 }
 
-@import "header", "content", "foot", "components/post", "components/forms";
+@import "header", "content", "foot", "components/post", "components/auth";

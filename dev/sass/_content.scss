@@ -25,15 +25,17 @@
                 margin-bottom: $freeSp;
                 width: 100%;
                 min-height: 100px;
-                padding: #freeSp;
+                padding: $freeSp;
                 border: 1px solid $gr; 
-                //background-color: lightcoral;           
-             }
+                background-color: $wht;           
+             
+                h2 {
+                    margin-top: 0;
+                }
+            }
+
+
         }
     }
-    @media (max-width: 991px) {
-        .container{
-            flex-direction: column-reverse;
-        }
-    }
+
 }
