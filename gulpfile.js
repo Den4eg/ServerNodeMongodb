@@ -5,6 +5,7 @@ var rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
+    babel = require('gulp-babel'),
     concat = require('gulp-concat');
 
 var { watch, series, parallel, dest, src, task } = require('gulp');
@@ -48,6 +49,9 @@ function css() {
 function scripts() {
     return src('dev/js/*.js')
         .pipe(concat('scripts.js'))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(
             uglify({
                 toplevel: true
@@ -58,15 +62,18 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
-function html() {
-    return src('dev/*.html')
-        .pipe(dest('public/'))
-        .pipe(browserSync.stream());
-}
+// function html() {
+//     return src('dev/*.html')
+//         .pipe(dest('public/'))
+//         .pipe(browserSync.stream());
+// }
 
 
-task('default', () => {
+function watcher() {
     watch('dev/sass/**/*.scss', series(sas, css));
     watch('dev/js/**/*.js', scripts);
-});
-//exports.build = series(imgMin, sas, parallel(css, scripts));
+};
+
+
+exports.default = series(sas, css, scripts, watcher);
+exports.build = series(imgMin, sas, parallel(css, scripts));

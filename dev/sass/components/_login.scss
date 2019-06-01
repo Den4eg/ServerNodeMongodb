@@ -1,0 +1,20 @@
+.login-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+
+
+.login-page {
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $gr;    
+
+        .login {
+            width: 25%;
+        }
+    }
+}
