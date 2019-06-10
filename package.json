@@ -32,7 +32,6 @@
     "uglify-js": "^3.4.9"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^3.1.13",
