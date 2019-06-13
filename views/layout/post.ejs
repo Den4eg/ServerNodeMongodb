@@ -1,18 +1,70 @@
-<div class="post">
-    <div class="top">
-        <h2>Заголовок поста</h2>
+<div class="wraper">
+
+    <div class="new__user slide-propusk">
+        <span class="label__propusk">Пропуск</span>
+        <span class="btn__prop">
+            <span class="image__propusk icon-left-open"></span>
+        </span>
+
+
+        <form autocomplete="off" id="new-ticket">
+            <div class="title-blanc user-data">
+                <span>31 февраля 2119 г. Пропуск № 54 </span>
+                <select name="transaction" id="transaction">
+                    <option value="out">Отгрузка</option>
+                    <option value="in">Приход</option>
+                </select>
+            </div>
+            <div class="user-data">
+                <div class="label">
+                    <label for="second-name">Фамилия</label>
+                    <input autocomplete="off" type="text" name="second_name" placeholder="Фамилия">
+                </div>
+                <div class="label">
+                    <label for="org">Организация</label>
+                    <input autocomplete="off" type="text" name="org" placeholder="Организация">
+                </div>
+                <div class="label">
+                    <label for="org">Контактный телефон</label>
+                    <input autocomplete="off" type="text" name="org" placeholder="Контактный телефон">
+                </div>
+            </div>
+            <div class="user-car-data">
+                <div class="label">
+                    <label for="mark-avto">Марка авто</label>
+                    <input autocomplete="off" type="text" name="mark-avto" placeholder="Марка авто">
+                </div>
+
+                <div class="label">
+                    <label for="number-avto">Номер авто</label>
+                    <input autocomplete="off" type="text" name="number-avto" placeholder="Номер авто">
+                </div>
+                <div class="label">
+                    <label for="trailer">Номер прицепа</label>
+                    <input autocomplete="off" type="text" name="trailer" placeholder="Номер прицепа">
+                </div>
+
+            </div>
+            <div class="ticket-result">
+
+                <div id="buttons">
+                    <div id="reset">Очистить</div>
+                    <div id="send">Отправить</div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="body">
-        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вопрос там щеке осталось
-            рекламных рыбными назад наш все рыбного оксмокс однажды, выйти встретил мир эта приставка. Продолжил родного
-            реторический скатился рот рукописи? Оксмокс обеспечивает, знаках курсивных дал образ речью имени букв жизни,
-            заглавных подпоясал страну своих рекламных жаренные сих предупредила. Текстов бросил однажды текста силуэт
-            алфавит они переписали рукопись!</p>
-    </div>
-    <div class="bottom">
-        <div class="author">
-            Автор:<a href="/">Гелентовский</a>
-        </div>
-        <a href="/">Коментарий</a>
+
+    <% include mainWindow.ejs %>
+
+    <div class="email-window">
+
+
+        <% include message.ejs %>
+        <!-- <% include message.ejs %>
+        <% include message.ejs %>
+        <% include message.ejs %>
+        <% include message.ejs %> -->
+
     </div>
 </div>

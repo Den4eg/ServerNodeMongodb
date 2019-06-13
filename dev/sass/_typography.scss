@@ -39,3 +39,17 @@ h1 {
   .font_small {
     font-size: 0.8em;
   }
+
+  div.succes, div.error, p.succes, p.error {
+    background-color: lighten($succes, 40);
+    border: 1px solid $succes;
+    font-size: .8em;
+    padding: $freeSp / 2;
+    color: $succes;
+    border-radius: 3px;
+  }
+  div.error,p.error {
+    color: $err;
+    border-color: $err;
+    background-color: lighten($err , 30)
+  }

@@ -17,6 +17,8 @@
         background-color: $blk;
         padding: 0 $freeSp 0 $freeSp;
 
+        
+
         #clock , #week{
             margin-right: 15px;
             color: $wht;
@@ -33,21 +35,26 @@
             font-style: bold;
             
         }
+        .color-change{
+            color: $prim !important;
+        }
 
         .date-time {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
+            
         }
 
         .menu {
             display: flex;
             list-style: none;
             height: 100%;
-            width: 60%;
+            // width: auto;
             align-items: center;
             justify-content: flex-end;
+            
             
             #svg-icon {
                 color: $wht;

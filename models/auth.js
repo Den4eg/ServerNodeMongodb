@@ -8,6 +8,9 @@ const schema = new Schema(
         },
         password: {
             type: String
+        },
+        group: {
+            type: String
         }
     },
     { timestamps: true }

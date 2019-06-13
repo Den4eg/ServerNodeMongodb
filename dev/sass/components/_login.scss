@@ -1,20 +1,40 @@
+.hello {
+    display: none;
+}
+
+.abs {
+    text-align: center;
+}
+
+.input-error {
+    border: 1px solid #f53a3a;
+    background-color: lightin(#f53a3a, 30);
+}
+
 .login-main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-
-
-.login-page {
-    width: 100%;
-    min-height: inherit;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    // background-color: $gr;    
-
-        .login {
-            width: 25%;
-        }
+    flex-grow: 1;
+    #admin-error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
     }
+
+    .login-page {
+        width: 100%;
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: $gr;    
+
+            .login {
+                width: 25%;
+            }
+        }
 }

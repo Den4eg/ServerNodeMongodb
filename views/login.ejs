@@ -1,11 +1,23 @@
 <% include layout/header.ejs %>
 
 <div class="login-main">
-    <a href="/api/register">Admin</a>
+
     <div class="container">
+
+        <div id="hello-user-name" class="hello">
+            <h1></h1>
+        </div>
         <div class="login-page">
-            <% include layout/form.ejs %>
+            <% 
+       
+            include layout/form.ejs
+            
+            %>
+
+
         </div>
     </div>
+
+
 </div>
 <% include layout/footer.ejs %>

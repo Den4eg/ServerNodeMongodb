@@ -1,39 +1,16 @@
 <form method="post" class="login">
-
-    <!-- <div class="register">
-        <h2>Регистрация</h2>
-        <div class="form-group">
-            <label for="name">Логин</label>
-            <input type="name">
-        </div>
-        <div class="form-group">
-            <label for="password">Пароль</label>
-            <input type="password">
-        </div>
-        <div class="form-group">
-            <label for="password">Подтверждение пароля</label>
-            <input type="password">
-        </div>
-        <div class="buttons">
-            <button type="submit" class="login-button">Отправить</button>
-            <button type="submit" class="register-button inverse">Авторизация</button>
-        </div>
-    </div> -->
-    <h2>Авторизация</h2>
-
     <div class="sign-in">
+        <h2>Вход</h2>
         <div class="form-group">
             <label for="name">Логин</label>
-            <input type="name" name="login">
+            <input type="name" autocomplete="off" id="login" name="login">
         </div>
         <div class="form-group">
             <label for="password">Пароль</label>
-            <input type="password" name="pass">
+            <input type="password" autocomplite="false" id="pass" name="pass">
         </div>
         <div class="buttons">
-            <button type="submit" class="login-button">Войти</button>
+            <button type="submit" autocomplete="off" id="btn-send" class="login-button">Войти</button>
         </div>
     </div>
-
-
 </form>

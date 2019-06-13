@@ -1,0 +1,42 @@
+<% include layout/header.ejs %>
+<h1 class="abs">Admin page</h1>
+<div class="login-main">
+    <% if(user.group == 'admin'){ %>
+
+
+
+    <div class="login-page">
+        <form method="post" class="login">
+            <div class="sign-in">
+                <h2>New User</h2>
+                <div class="form-group">
+                    <label for="name">Логин</label>
+                    <input type="name" id="login-reg" autocomplete="off" name="login">
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" autocomplete="off" id="pass-reg" name="pass">
+                </div>
+                <div class="form-group">
+                    <label for="user-group">Группа пользователя</label>
+                    <select name="select-group" id="select-reg">
+                        <option value="lamer">Бот</option>
+                        <option value="moder">Продвинутый бот</option>
+                        <option value="admin">Ботовод</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <button type="submit" id="btn-send-reg" class="login-button">Создать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <% } else {%>
+    <div id="admin-error" class="error">
+        <h1>Данная страница доступна только администратору сайта</h1>
+        <h3>Войдите под учетной записью администратора</h3>
+    </div>
+    <% } %>
+</div>
+
+<% include layout/footer.ejs %>
