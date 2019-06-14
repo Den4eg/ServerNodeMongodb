@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
-textarea, input, button {
+textarea,
+input,
+button {
   outline: none; }
 
 .container {
@@ -12,11 +14,33 @@ textarea, input, button {
   display: flex;
   min-height: inherit; }
 
-/* Portrait tablets and medium desktops */
-@media (min-width: 992px) {
+@media (min-width: 1920px) {
   .container {
     min-height: 100%;
-    width: 1150px; } }
+    width: 1750px; }
+    .container .new__user {
+      width: 720px; } }
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .container {
+    min-height: 100%;
+    width: 1350px; }
+    .container .new__user {
+      width: 720px; } }
+
+@media (min-width: 1150px) and (max-width: 1440px) {
+  .container {
+    min-height: 100%;
+    width: 1100px; }
+    .container .new__user {
+      width: 720px; } }
+
+@media (min-width: 992px) and (max-width: 1149px) {
+  .container {
+    min-height: 100%;
+    width: 900px; }
+    .container .new__user {
+      width: 720px; } }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -181,6 +205,9 @@ body {
   background-color: #fafafa;
   padding-top: 64px; }
 
+input {
+  min-width: 0; }
+
 .header {
   background-color: #333;
   position: fixed;
@@ -197,17 +224,22 @@ body {
     align-items: center;
     background-color: #333;
     padding: 0 15px 0 15px; }
-    .header .container #clock, .header .container #week {
-      margin-right: 15px;
-      color: #fff;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      text-decoration: none;
-      font-size: 1.3em;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-      .header .container #clock:hover, .header .container #week:hover {
-        color: #08aef1; }
-    .header .container #clock {
-      font-style: bold; }
+    .header .container .date-time {
+      left: 20px;
+      position: absolute; }
+      .header .container .date-time #clock,
+      .header .container .date-time #week {
+        margin-right: 15px;
+        color: #fff;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        font-size: 1.3em;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+        .header .container .date-time #clock:hover,
+        .header .container .date-time #week:hover {
+          color: #08aef1; }
+      .header .container .date-time #clock {
+        font-style: bold; }
     .header .container .color-change {
       color: #08aef1 !important; }
     .header .container .date-time {
@@ -293,7 +325,7 @@ body {
       color: #fff; }
 
 .new__user {
-  left: 47%;
+  right: -680px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -304,7 +336,8 @@ body {
   opacity: .9;
   color: #fff;
   border-radius: 4px;
-  transition: all .4s ease-in-out; }
+  transition: .4s ease-in-out;
+  z-index: 2; }
   .new__user label {
     margin: 5px; }
   .new__user input {
@@ -401,7 +434,8 @@ body {
   cursor: pointer; }
 
 .slide-propusk {
-  left: 97% !important; }
+  transition: all .4s ease-in-out;
+  right: 10px; }
 
 .wraper {
   display: grid;
@@ -461,31 +495,53 @@ body {
       width: 25%; }
 
 .main-window {
-  background-color: #e8e8e8;
   min-height: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: all .4s ease-in-out; }
 
 .car-on-ter {
-  background-color: #fff;
+  background-color: #333;
+  opacity: .9;
   margin: 10px;
   display: flex;
-  flex-direction: column; }
-  .car-on-ter .car-on-ter-head {
+  flex-direction: row;
+  padding: 5px;
+  z-index: 0; }
+  .car-on-ter .first_col,
+  .car-on-ter .second_col,
+  .car-on-ter .fird_col,
+  .car-on-ter .fourth_col,
+  .car-on-ter .fiveth_col {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    height: 50px;
-    padding: 7px; }
-    .car-on-ter .car-on-ter-head div {
-      padding: 10px;
-      border: 1px solid #333; }
-  .car-on-ter .car-on-ter-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
-    padding: 7px; }
-    .car-on-ter .car-on-ter-body div {
-      padding: 10px;
-      border: 1px solid #333; }
+    width: 20%; }
+    .car-on-ter .first_col label,
+    .car-on-ter .second_col label,
+    .car-on-ter .fird_col label,
+    .car-on-ter .fourth_col label,
+    .car-on-ter .fiveth_col label {
+      color: #fff; }
+    .car-on-ter .first_col input,
+    .car-on-ter .second_col input,
+    .car-on-ter .fird_col input,
+    .car-on-ter .fourth_col input,
+    .car-on-ter .fiveth_col input {
+      padding: 5px;
+      margin: 5px; }
+    .car-on-ter .first_col .car-date,
+    .car-on-ter .second_col .car-date,
+    .car-on-ter .fird_col .car-date,
+    .car-on-ter .fourth_col .car-date,
+    .car-on-ter .fiveth_col .car-date {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%; }
+      .car-on-ter .first_col .car-date input,
+      .car-on-ter .second_col .car-date input,
+      .car-on-ter .fird_col .car-date input,
+      .car-on-ter .fourth_col .car-date input,
+      .car-on-ter .fiveth_col .car-date input {
+        padding: 5px; }

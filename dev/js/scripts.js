@@ -1,4 +1,3 @@
-
 // Header clock
 function clock() {
     let d = new Date();
@@ -13,7 +12,9 @@ function clock() {
 
     $('#clock').html(hours[d.getHours()] + ' : ' + minutes[d.getMinutes()])
     $('#week').html(day[d.getDay()] + '  ' + d.getDate() + '  ' + month[d.getMonth()]);
-    setTimeout(function () { clock() }, 1000);
+    setTimeout(function () {
+        clock()
+    }, 1000);
 };
 clock()
 
@@ -33,12 +34,17 @@ $('#menu-button').on('click', function (e) {
 
     if (!menuLabel) {
         $('#svg-icon').css('transform', 'rotateY(180deg)');
-        $('.menu-list').css({ 'transition': 'all .5s ease-in-out', 'width': '100%' })
+        $('.menu-list').css({
+            'transition': 'all .5s ease-in-out',
+            'width': '100%'
+        })
         menuLabel = !menuLabel
-    }
-    else {
+    } else {
         $('#svg-icon').css('transform', 'rotateY(0deg)');
-        $('.menu-list').css({ 'transition': 'all .5s ease-in-out', 'width': '0' })
+        $('.menu-list').css({
+            'transition': 'all .5s ease-in-out',
+            'width': '0'
+        })
         menuLabel = !menuLabel
     }
 })
@@ -67,7 +73,11 @@ $('#btn-send-reg').on('click', function (e) {
     } else {
         $.ajax({
             type: 'POST',
-            data: JSON.stringify({ login, pass, group }),
+            data: JSON.stringify({
+                login,
+                pass,
+                group
+            }),
             contentType: 'application/JSON',
             url: '/api/register'
         }).done((data) => {
@@ -103,7 +113,10 @@ $('#btn-send').on('click', function (e) {
     else {
         $.ajax({
             type: 'POST',
-            data: JSON.stringify({ login, pass }),
+            data: JSON.stringify({
+                login,
+                pass
+            }),
             contentType: 'application/JSON',
             url: '/api/login'
         }).done((data) => {
@@ -112,9 +125,10 @@ $('#btn-send').on('click', function (e) {
                 $('#hello-user-name').css('display', 'block')
                 $('.login-page').css('display', 'none')
                 $('h1').html('Добро пожаловать ' + data.username)
-                setTimeout(() => { $(location).attr('href', '/index') }, 1000)
-            }
-            else {
+                setTimeout(() => {
+                    $(location).attr('href', '/index')
+                }, 1000)
+            } else {
                 $('input').addClass('input-error')
             }
         });
@@ -137,4 +151,3 @@ function nowDate() {
     $('.now-date').html(d.getDate() + '  ' + month[d.getMonth()] + '  ' + d.getFullYear() + ' г.')
 }
 nowDate()
-

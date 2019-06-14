@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en-EN, ru-RU">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="<%= assetFingerprint('css/style.min.css') %>"
+		/>
+		<title>Node JS</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<%= assetFingerprint('css/style.min.css') %>">
-    <title>Node JS</title>
-</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="date-time">
+					<span id="week" class="watch"></span>
+					<span id="clock" class="watch"></span>
+				</div>
+				<a href="/" class="logo"> </a>
 
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="date-time">
-                <span id="week" class="watch"></span>
-                <span id="clock" class="watch"></span>
-            </div>
-            <a href="/" class="logo">
+				<% if(user.login) {%>
+				<nav class="menu">
+					<div class="menu-list">
+						<% if(user.group == 'admin') {%>
+						<a class="menu-head" id="adminka" href="/admin">Админка</a>
+						<% } %>
+						<a class="menu-head" id="logout" href="/api/logout">Выход</a>
+						<a class="menu-head" href="#">Помощь</a>
+						<a class="menu-head" href="#">История</a>
+						<% if(user.group == 'admin' || user.group == 'moder') {%>
+						<a class="menu-head" href="#">Посетители</a>
+						<% } %>
+						<a class="menu-head" href="#">Портал</a>
+						<a class="menu-head" href="/">Главная</a>
+					</div>
 
-            </a>
+					<span id="svg-icon" class="icon-left-open"></span>
 
+					<div id="menu-button" class="menu-head">Menu</div>
+				</nav>
 
-
-            <% if(user.login) {%>
-            <nav class="menu">
-                <div class="menu-list">
-                    <% if(user.group == 'admin') {%>
-                    <a class="menu-head" id="adminka" href="/admin">Админка</a>
-                    <% } %>
-                    <a class="menu-head" id="logout" href="/api/logout">Выход</a>
-                    <a class="menu-head" href="#">Помощь</a>
-                    <a class="menu-head" href="#">История</a>
-                    <% if(user.group == 'admin' || user.group == 'moder') {%>
-                    <a class="menu-head" href="#">Посетители</a>
-                    <% } %>
-                    <a class="menu-head" href="#">Портал</a>
-                    <a class="menu-head" href="/">Главная</a>
-
-                </div>
-
-                <span id="svg-icon" class="icon-left-open"></span>
-
-                <div id="menu-button" class="menu-head">Menu</div>
-
-
-            </nav>
-
-            <% } %>
-
-        </div>
-    </header>
+				<% } %>
+			</div>
+		</header>
+	</body>
+</html>

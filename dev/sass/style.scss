@@ -1,4 +1,4 @@
-@import "reset","const","grid","typography", "forms";
+@import "reset", "const", "grid", "typography", "forms";
 
 
 html {
@@ -15,6 +15,10 @@ body {
     color: $blk;
     background-color: lighten($gr, 7);
     padding-top: $nomHeight + $freeSp;
+}
+
+input {
+    min-width: 0;
 }
 
 @import "header", "content", "foot", "components/post", "components/login", "components/mainWindow";

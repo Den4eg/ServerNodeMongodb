@@ -1,70 +1,93 @@
 <div class="wraper">
+	<div class="new__user ">
+		<span class="label__propusk">Пропуск</span>
+		<span class="btn__prop">
+			<span class="image__propusk icon-left-open"></span>
+		</span>
 
-    <div class="new__user slide-propusk">
-        <span class="label__propusk">Пропуск</span>
-        <span class="btn__prop">
-            <span class="image__propusk icon-left-open"></span>
-        </span>
+		<form autocomplete="off" id="new-ticket">
+			<div class="title-blanc user-data">
+				<span>31 февраля 2119 г. Пропуск № 54 </span>
+				<select name="transaction" id="transaction">
+					<option value="out">Отгрузка</option>
+					<option value="in">Приход</option>
+				</select>
+			</div>
+			<div class="user-data">
+				<div class="label">
+					<label for="second-name">Фамилия</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="second_name"
+						placeholder="Фамилия"
+					/>
+				</div>
+				<div class="label">
+					<label for="org">Организация</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="org"
+						placeholder="Организация"
+					/>
+				</div>
+				<div class="label">
+					<label for="org">Контактный телефон</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="org"
+						placeholder="Контактный телефон"
+					/>
+				</div>
+			</div>
+			<div class="user-car-data">
+				<div class="label">
+					<label for="mark-avto">Марка авто</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="mark-avto"
+						placeholder="Марка авто"
+					/>
+				</div>
 
+				<div class="label">
+					<label for="number-avto">Номер авто</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="number-avto"
+						placeholder="Номер авто"
+					/>
+				</div>
+				<div class="label">
+					<label for="trailer">Номер прицепа</label>
+					<input
+						autocomplete="off"
+						type="text"
+						name="trailer"
+						placeholder="Номер прицепа"
+					/>
+				</div>
+			</div>
+			<div class="ticket-result">
+				<div id="buttons">
+					<div id="reset">Очистить</div>
+					<div id="send">Отправить</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
-        <form autocomplete="off" id="new-ticket">
-            <div class="title-blanc user-data">
-                <span>31 февраля 2119 г. Пропуск № 54 </span>
-                <select name="transaction" id="transaction">
-                    <option value="out">Отгрузка</option>
-                    <option value="in">Приход</option>
-                </select>
-            </div>
-            <div class="user-data">
-                <div class="label">
-                    <label for="second-name">Фамилия</label>
-                    <input autocomplete="off" type="text" name="second_name" placeholder="Фамилия">
-                </div>
-                <div class="label">
-                    <label for="org">Организация</label>
-                    <input autocomplete="off" type="text" name="org" placeholder="Организация">
-                </div>
-                <div class="label">
-                    <label for="org">Контактный телефон</label>
-                    <input autocomplete="off" type="text" name="org" placeholder="Контактный телефон">
-                </div>
-            </div>
-            <div class="user-car-data">
-                <div class="label">
-                    <label for="mark-avto">Марка авто</label>
-                    <input autocomplete="off" type="text" name="mark-avto" placeholder="Марка авто">
-                </div>
+	<% include mainWindow.ejs %>
 
-                <div class="label">
-                    <label for="number-avto">Номер авто</label>
-                    <input autocomplete="off" type="text" name="number-avto" placeholder="Номер авто">
-                </div>
-                <div class="label">
-                    <label for="trailer">Номер прицепа</label>
-                    <input autocomplete="off" type="text" name="trailer" placeholder="Номер прицепа">
-                </div>
-
-            </div>
-            <div class="ticket-result">
-
-                <div id="buttons">
-                    <div id="reset">Очистить</div>
-                    <div id="send">Отправить</div>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    <% include mainWindow.ejs %>
-
-    <div class="email-window">
-
-
-        <% include message.ejs %>
-        <!-- <% include message.ejs %>
+	<div class="email-window">
+		<% include message.ejs %>
+		<!-- <% include message.ejs %>
         <% include message.ejs %>
         <% include message.ejs %>
         <% include message.ejs %> -->
-
-    </div>
+	</div>
 </div>

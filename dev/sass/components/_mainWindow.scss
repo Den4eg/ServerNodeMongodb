@@ -1,5 +1,5 @@
 .main-window {
-    background-color: $gr;
+    // background-color: $gr;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -7,31 +7,49 @@
 }
 
 .car-on-ter {
-    background-color: $wht;
+    background-color: $blk;
+    opacity: .9;
     margin: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    // width: 100%;
+    padding: 5px;
+    z-index: 0;
 
-    .car-on-ter-head {
+    .first_col,
+    .second_col,
+    .fird_col,
+    .fourth_col,
+    .fiveth_col {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        height: 50px;
-        padding: 7px;
-        & div {
-            padding: 10px;
-            border: 1px solid $blk;
+        width: 20%;
+        // padding: 5px;
+
+        label {
+            color: $wht;
         }
-    }
-    .car-on-ter-body {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 50px;
-        padding: 7px;
-        & div {
-            padding: 10px;
-            border: 1px solid $blk;
+
+        input {
+            padding: 5px;
+            // width: 97%;
+            margin: 5px;
+        }
+
+        .car-date {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+            input {
+                padding: 5px;
+                // width: 46%;
+                // margin-right: 5px;
+
+
+            }
         }
     }
 }
