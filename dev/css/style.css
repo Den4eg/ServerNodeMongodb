@@ -271,8 +271,7 @@ input {
         color: #fff;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-decoration: none;
-        font-size: 1.3em;
-        transition: .2s; }
+        font-size: 1.3em; }
         .header .container .menu .menu-head:hover {
           color: #08aef1; }
         .header .container .menu .menu-head:active {
@@ -283,7 +282,8 @@ input {
         justify-content: space-around;
         flex-direction: row;
         overflow: hidden;
-        width: 0px; }
+        width: 0px;
+        transition: all 0.4s cubic-bezier(0.14, 0.04, 0.76, 1.15); }
 
 .main {
   display: flex;
@@ -400,12 +400,12 @@ input {
   font-size: 22px;
   cursor: pointer;
   color: #08aef1;
-  transition: .4s; }
+  transition: .8s; }
   .image__propusk:hover {
     color: #e908f1; }
 
 .image__propusk__rotate {
-  transition: .4s;
+  transition: .8s;
   transform: rotateY(180grad); }
 
 .label__propusk {

@@ -35,14 +35,12 @@ $('#menu-button').on('click', function (e) {
     if (!menuLabel) {
         $('#svg-icon').css('transform', 'rotateY(180deg)');
         $('.menu-list').css({
-            'transition': 'all .5s ease-in-out',
             'width': '100%'
         })
         menuLabel = !menuLabel
     } else {
         $('#svg-icon').css('transform', 'rotateY(0deg)');
         $('.menu-list').css({
-            'transition': 'all .5s ease-in-out',
             'width': '0'
         })
         menuLabel = !menuLabel
@@ -143,7 +141,7 @@ $('.btn__prop').on('click', function () {
 
 /* * Main Window * */
 
-// Header title date
+// Current day log date
 
 function nowDate() {
     let d = new Date();
