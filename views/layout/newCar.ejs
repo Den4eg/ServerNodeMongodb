@@ -41,56 +41,73 @@
 </div> -->
 
 <!-- Vertical flex -->
-<div class="car-on-ter">
-	<div class="first_col">
-		<div class="car-date">
-			<div>
-				<label for="in-time">Въезд</label>
-				<input type="text" name="in-time" placeholder="Въезд" />
+<div class="car-on-ter-wraper">
+	<span id="org__tick">Major</span>
+	<div class="prop-info">
+		<span id="num__tick">
+			Пропуск № 234
+		</span>
+	</div>
+	<div class="car-on-ter">
+		<div class="first_col">
+			<div class="car-date">
+				<div>
+					<label for="in-time">Въезд</label>
+					<input type="text" name="in-time" placeholder="Въезд" />
+				</div>
+				<div>
+					<label for="in-time">Выезд</label>
+					<input type="text" placeholder="Выезд" />
+				</div>
 			</div>
-			<div>
-				<label for="in-time">Выезд</label>
-				<input type="text" placeholder="Выезд" />
+			<div class="car-on-ter-number">
+				<label for="car-number">Номер машины</label>
+				<input type="text" placeholder="Номер машины" />
 			</div>
 		</div>
-		<div class="car-on-ter-number">
-			<input type="text" placeholder="Номер машины" />
-		</div>
-	</div>
 
-	<div class="second_col">
-		<div class="car-type">
-			<input type="text" placeholder="Приход / Отгруз" />
+		<div class="second_col">
+			<div class="car-type">
+				<label for="status">Приход / Отгруз</label>
+				<input type="text" name="status" placeholder="Приход / Отгруз" />
+			</div>
+			<div class="car-on-ter-marc">
+				<label for="car-marc">Марка машины</label>
+				<input type="text" name="car-marc" placeholder="Марка машины" />
+			</div>
 		</div>
-		<div class="car-on-ter-marc">
-			<input type="text" placeholder="Марка машины" />
-		</div>
-	</div>
 
-	<div class="fird_col">
-		<div class="car-org">
-			<input type="text" placeholder="Организация" />
+		<div class="fird_col">
+			<div class="car-org">
+				<label for="organisation">Организация</label>
+				<input type="text" name="organisation" placeholder="Организация" />
+			</div>
+			<div class="car-on-ter-driver-name">
+				<label for="driver-name">Ф.И.О водителя</label>
+				<input type="text" name="driver-name" placeholder="Водитель" />
+			</div>
 		</div>
-		<div class="car-on-ter-driver-name">
-			<input type="text" placeholder="Водитель" />
-		</div>
-	</div>
 
-	<div class="fourth_col">
-		<div class="car-statuss">
-			<input type="text" placeholder="Статус отгрузки" />
+		<div class="fourth_col">
+			<div class="car-statuss">
+				<label for="status-quit">Статус авто</label>
+				<input type="text" name="status-quit" placeholder="Статус авто" />
+			</div>
+			<div class="car-on-ter-driver-doc">
+				<label for="driver-doc">Паспорт / ВУ</label>
+				<input type="text" name="driver-doc" placeholder="Паспорт / ВУ" />
+			</div>
 		</div>
-		<div class="car-on-ter-driver-doc">
-			<input type="text" placeholder="Паспорт / ВУ" />
-		</div>
-	</div>
 
-	<div class="fiveth_col">
-		<div class="car-on-ter-driver-phone">
-			<input type="text" placeholder="Номер телефона" />
-		</div>
-		<div class="car-on-ter-trailer-number">
-			<input type="text" placeholder="Номер прицепа" />
+		<div class="fiveth_col">
+			<div class="car-on-ter-driver-phone">
+				<label for="driver-phone">Номер телефона</label>
+				<input type="text" name="driver-phone" placeholder="Номер телефона" />
+			</div>
+			<div class="car-on-ter-trailer-number">
+				<label for="truck-num">Номер прицепа</label>
+				<input type="text" name="truck-num" placeholder="Номер прицепа" />
+			</div>
 		</div>
 	</div>
 </div>
