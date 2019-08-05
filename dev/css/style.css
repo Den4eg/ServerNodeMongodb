@@ -30,7 +30,14 @@ button {
     .container .new__user {
       width: 720px; } }
 
-@media (min-width: 1150px) and (max-width: 1440px) {
+@media (min-width: 1300px) and (max-width: 1440px) {
+  .container {
+    min-height: 100%;
+    width: 1200px; }
+    .container .new__user {
+      width: 720px; } }
+
+@media (min-width: 1150px) and (max-width: 1300px) {
   .container {
     min-height: 100%;
     width: 1100px; }
@@ -318,7 +325,6 @@ input {
   border-top: 1px solid #e8e8e8;
   background-color: #333; }
   .footer .container {
-    height: 100%;
     line-height: 49px; }
     .footer .container .user-info {
       display: flex;
@@ -327,7 +333,7 @@ input {
       color: #fff; }
 
 .new__user {
-  right: -680px;
+  right: -760px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -344,16 +350,29 @@ input {
     margin: 5px; }
   .new__user input {
     min-width: 220px;
-    margin-right: 10px;
-    border: 4px solid #333;
+    text-align: center;
+    height: 32px;
     opacity: .9;
-    background-color: #e8e8e8; }
+    background-color: #e8e8e8;
+    font-size: 1.3rem; }
     .new__user input[name='number-avto'] {
       text-transform: uppercase; }
       .new__user input[name='number-avto']::placeholder {
         text-transform: capitalize; }
     .new__user input:last-child {
       margin-right: 0; }
+    .new__user input:focus {
+      outline: 2px solid #08aef1; }
+  .new__user select {
+    background-color: #333;
+    color: #08aef1;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    text-align: center; }
+    .new__user select:focus {
+      outline: none; }
   .new__user .user-data {
     display: flex;
     flex-direction: row;
@@ -368,30 +387,30 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .new__user #buttons #send {
+    .new__user #buttons .send {
       margin-right: 4px;
       border: 2px solid #fff;
       border-radius: 14px;
       padding: 5px 27px 5px 27px;
       cursor: pointer;
       transition: .2s; }
-      .new__user #buttons #send:hover {
+      .new__user #buttons .send:hover {
         color: #08aef1;
         border: 2px solid #08aef1; }
-      .new__user #buttons #send:active {
+      .new__user #buttons .send:active {
         transform: translateY(-2px);
         text-shadow: 0 0 8px #fff !important; }
-    .new__user #buttons #reset {
+    .new__user #buttons .reset {
       margin-right: 4px;
       border: 2px solid #fff;
       border-radius: 14px;
       padding: 5px 27px 5px 27px;
       cursor: pointer;
       transition: .2s; }
-      .new__user #buttons #reset:hover {
+      .new__user #buttons .reset:hover {
         color: #e908f1;
         border: 2px solid #e908f1; }
-      .new__user #buttons #reset:active {
+      .new__user #buttons .reset:active {
         transform: translateY(-2px);
         text-shadow: 0 0 8px #fff !important; }
 
@@ -435,6 +454,10 @@ input {
   background-color: #333;
   cursor: pointer; }
 
+.label {
+  margin: 3px;
+  text-align: center; }
+
 .slide-propusk {
   transition: all .4s ease-in-out;
   right: 10px; }
@@ -443,6 +466,7 @@ input {
   display: grid;
   grid-template-columns: 3fr 1fr; }
   .wraper .email-window {
+    margin-top: 43px;
     margin-left: 15px;
     margin-bottom: 15px;
     border-radius: 4px; }
@@ -454,16 +478,6 @@ input {
       margin-bottom: 7.5px; }
       .wraper .email-window .email-message:last-child {
         margin-bottom: 0; }
-  .wraper select {
-    background-color: #333;
-    color: #08aef1;
-    width: 100px;
-    height: 30px;
-    font-size: 18px;
-    border: none;
-    text-align: center; }
-    .wraper select:focus {
-      outline: none; }
 
 .hello {
   display: none; }
@@ -501,29 +515,41 @@ input {
   display: flex;
   flex-direction: column;
   transition: all .4s ease-in-out; }
+  .main-window .main-window-header {
+    padding: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .main-window .main-window-header .title-header, .main-window .main-window-header .now-date {
+      font-size: 20px;
+      font-weight: 600;
+      color: rgba(51, 51, 51, 0.9); }
+    .main-window .main-window-header .now-date {
+      margin-left: 7px; }
 
 .car-on-ter-wraper {
   background-color: #333;
   opacity: .9;
-  color: #08aef1;
   text-align: center;
-  margin-bottom: 10px; }
-  .car-on-ter-wraper #org__tick {
-    width: 40px;
-    position: fixed;
-    background-color: aliceblue;
-    float: left;
-    text-align: left; }
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #333; }
+  .car-on-ter-wraper .prop-info {
+    color: #08aef1; }
   .car-on-ter-wraper .prop-info {
     margin-top: 5px; }
   .car-on-ter-wraper .car-on-ter {
     background-color: #333;
     opacity: .9;
+    margin: 0 3px 3px 3px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 3px;
+    padding: 0 3px 3px 3px;
     z-index: 0; }
+    .car-on-ter-wraper .car-on-ter .margin_top7 {
+      margin-top: 7px; }
     .car-on-ter-wraper .car-on-ter .first_col,
     .car-on-ter-wraper .car-on-ter .second_col,
     .car-on-ter-wraper .car-on-ter .fird_col,
@@ -546,7 +572,14 @@ input {
       .car-on-ter-wraper .car-on-ter .fourth_col input,
       .car-on-ter-wraper .car-on-ter .fiveth_col input {
         box-sizing: border-box;
-        height: 30px; }
+        height: 30px;
+        text-align: center; }
+        .car-on-ter-wraper .car-on-ter .first_col input:focus,
+        .car-on-ter-wraper .car-on-ter .second_col input:focus,
+        .car-on-ter-wraper .car-on-ter .fird_col input:focus,
+        .car-on-ter-wraper .car-on-ter .fourth_col input:focus,
+        .car-on-ter-wraper .car-on-ter .fiveth_col input:focus {
+          outline: 2px solid #08aef1; }
       .car-on-ter-wraper .car-on-ter .first_col .car-date,
       .car-on-ter-wraper .car-on-ter .second_col .car-date,
       .car-on-ter-wraper .car-on-ter .fird_col .car-date,
@@ -567,3 +600,21 @@ input {
         .car-on-ter-wraper .car-on-ter .fourth_col .car-date input,
         .car-on-ter-wraper .car-on-ter .fiveth_col .car-date input {
           padding: 5px; }
+  .car-on-ter-wraper .btns_docs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .car-on-ter-wraper .btns_docs .btn_blocks {
+      margin-right: 6px;
+      margin-bottom: 5px;
+      border: 2px solid #08aef1;
+      border-radius: 14px;
+      padding: 2px 17px 2px 17px;
+      cursor: pointer;
+      transition: .2s;
+      color: #08aef1; }
+      .car-on-ter-wraper .btns_docs .btn_blocks:hover {
+        color: #e908f1;
+        border: 2px solid #e908f1; }
+      .car-on-ter-wraper .btns_docs .btn_blocks:active {
+        transform: translateY(-2px); }

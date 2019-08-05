@@ -1,5 +1,5 @@
 .new__user {
-    right: -680px;
+    right: -760px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -19,10 +19,11 @@
 
     input {
         min-width: 220px;
-        margin-right: 10px;
-        border: 4px solid $blk;
+        text-align: center;
+        height: 32px;
         opacity: .9;
         background-color: $gr;
+        font-size: 1.3rem;
 
         &[name='number-avto'] {
             text-transform: uppercase;
@@ -34,6 +35,23 @@
 
         &:last-child {
             margin-right: 0;
+        }
+        &:focus{
+            outline: 2px solid $prim;
+        } 
+    }
+
+    select {
+        background-color: $blk;
+        color: $prim;
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        border: none;
+        text-align: center;
+
+        &:focus {
+            outline: none;
         }
     }
 
@@ -56,7 +74,7 @@
         flex-direction: row;
         justify-content: space-between;
 
-        #send {
+        .send {
             margin-right: 4px;
             border: 2px solid $wht;
             border-radius: 14px;
@@ -75,7 +93,7 @@
             }
         }
 
-        #reset {
+        .reset {
             margin-right: 4px;
             border: 2px solid $wht;
             border-radius: 14px;
@@ -140,7 +158,11 @@
     overflow: hidden;
     background-color: $blk;
     cursor: pointer;
+}
 
+.label {
+    margin: 3px;
+    text-align: center;
 }
 
 .slide-propusk {
@@ -152,9 +174,8 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
 
-
-
     .email-window {
+        margin-top: 43px;
         margin-left: $freeSp;
         margin-bottom: $freeSp;
         // border: 1px solid darken($gr, 30);
@@ -172,20 +193,6 @@
             &:last-child {
                 margin-bottom: 0;
             }
-        }
-    }
-
-    select {
-        background-color: $blk;
-        color: $prim;
-        width: 100px;
-        height: 30px;
-        font-size: 18px;
-        border: none;
-        text-align: center;
-
-        &:focus {
-            outline: none;
         }
     }
 }

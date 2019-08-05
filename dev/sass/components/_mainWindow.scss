@@ -4,21 +4,34 @@
     display: flex;
     flex-direction: column;
     transition: all .4s ease-in-out;
+
+    .main-window-header {
+        padding: 0 auto;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .title-header,.now-date {
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(51, 51, 51, .9);
+        }
+        .now-date {
+            margin-left: 7px;
+        }
+    }
 }
 
 .car-on-ter-wraper {
     background-color: $blk;
     opacity: .9;
-    color: $prim;
     text-align: center;
     margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px $blk;
 
-    #org__tick {
-        width: 40px;
-        position: fixed;
-        background-color: aliceblue;
-        float: left;
-
+    .prop-info {
+        color: $prim;
     }
 
     .prop-info {
@@ -28,13 +41,16 @@
     .car-on-ter {
         background-color: $blk;
         opacity: .9;
-        // margin: 10px;
+        margin: 0 3px 3px 3px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding: 3px;
+        padding: 0 3px 3px 3px;
         z-index: 0;
 
+        .margin_top7 {
+            margin-top: 7px;
+        }
 
         .first_col,
         .second_col,
@@ -50,13 +66,16 @@
 
             label {
                 color: $wht;
-                // display: none;
-                // margin-left: 10px;
             }
+           
 
             input {
                 box-sizing: border-box;
                 height: 30px;
+                text-align: center;
+                &:focus{
+                    outline: 2px solid $prim;
+                }
             }
 
             .car-date {
@@ -70,13 +89,35 @@
                 }
 
                 input {
-                    padding: 5px;
-
-                    // width: 46%;
-                    // margin-right: 5px;
-
-
+                    padding: 5px;             
                 }
+            }
+        }
+    }
+    .btns_docs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        .btn_blocks{
+            margin-right: 6px;
+            margin-bottom: 5px;
+            border: 2px solid $prim;
+            border-radius: 14px;
+            padding: 2px 17px 2px 17px;
+            cursor: pointer;
+            transition: .2s;
+            color: $prim;
+
+            &:hover {
+                color: #e908f1;
+                border: 2px solid #e908f1;
+            }
+
+            &:active {
+                transform: translateY(-2px);
+                // color: #e908f1;
+                // border: 2px solid #e908f1;
             }
         }
     }
