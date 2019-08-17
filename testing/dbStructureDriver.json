@@ -1,0 +1,60 @@
+{
+    "transport": {
+        "1": {
+            "id": "_objID",
+            "driverData": {
+                "firstName": "Ivan",
+                "midleName": "Ivanivich",
+                "lastName": "Ivanov",
+                "document": "24 05 534234",
+                "divisionCode": "770-123",
+                "organisation": "Major",
+                "phone": [
+                    "+7 234 234 34 65",
+                    "+7 888 123 35 12"
+                ]
+            },
+            "avtoData": {
+                "car": [
+                    {
+                        "carMake": "Toyota",
+                        "carNumber": "Е 243 ЕН 213"
+                    },
+                    {
+                        "carMake": "Lexus",
+                        "carNumber": "Е 001 КХ 999"
+                    }
+                ],
+                "trailer": "О 2345 НЕ 123"
+            }
+        },
+        "2": {
+            "id": "_objID",
+            "driverData": {
+                "firstName": "Petr",
+                "midleName": "Petrovich",
+                "lastName": "Petrov",
+                "document": "15 05 534234",
+                "divisionCode": "270-123",
+                "organisation": "JD",
+                "phone": [
+                    "+71 234 234 34 65",
+                    "+71 888 123 35 12"
+                ]
+            },
+            "avtoData": {
+                "car": [
+                    {
+                        "carMake": "Toyota",
+                        "carNumber": "Е 143 ЕН 113"
+                    },
+                    {
+                        "carMake": "Lexus",
+                        "carNumber": "Е 201 КХ 199"
+                    }
+                ],
+                "trailer": "О 2345 НЕ 125"
+            }
+        }
+    }
+}

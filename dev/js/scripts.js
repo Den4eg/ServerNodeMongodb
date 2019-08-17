@@ -151,3 +151,39 @@ function nowDate() {
     $('.now-date').html(d.getDate() + '  ' + month[d.getMonth()] + '  ' + d.getFullYear() + ' г.')
 }
 nowDate()
+
+
+/* -------------  Right sidebar  ----------------------- */
+
+// Ticket form query
+
+$('#ticket-clear').on('click', () => {
+    console.log('Form cleared')
+    $('#new-ticket')[0].reset();
+})
+
+$('#ticket-send').on('click', () => {
+    let form = {
+        transaction: $('#transaction').val(),
+        driverName: $('#driver-name').val(),
+        org: $('#org').val(),
+        phone: $('#phone').val(),
+        avtoNum: $('#number-avto').val(),
+        avtoMark: $('#mark-avto').val(),
+        trailer: $('#trailer').val()
+    }
+    // console.log(form)
+    $.ajax({
+        type: 'POST',
+        data: JSON.stringify({
+            form
+        }),
+        contentType: 'application/JSON',
+        url: '/api/newticket'
+    }).done((result) => {
+        console.log(result)
+        $('#new-ticket')[0].reset()
+    }).catch((err) => {
+        console.log(err.name)
+    })
+})

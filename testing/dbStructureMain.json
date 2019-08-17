@@ -1,0 +1,30 @@
+{
+    "1": {
+        "id": "_objID",
+        "serviceTags": {
+            "ticketNumber": "1++",
+            "importOrExport": "0=export, 1=import, 2=return",
+            "status": "0=not on ter, 1=on terr, 2=will return"
+        },
+        "versions": {
+            "_v++": {
+                "date": {
+                    "documentDate": {
+                        "created": "ISOdate",
+                        "changed": {
+                            "date": "ISOdate",
+                            "user": "changedUser"
+                        }
+                    },
+                    "localTime": {
+                        "incomingTime": "ISOdate.h + ISOdate.m",
+                        "outgoingTime": "ISOdate.h + ISOdate.m"
+                    }
+                },
+                "car": "Transport.ID",
+                "documents": [],
+                "notes": "String"
+            }
+        }
+    }
+}

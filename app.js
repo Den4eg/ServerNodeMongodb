@@ -21,7 +21,10 @@ mongoose.connection
     .on('close', () => console.log('Database conection closed'))
     .once('open', () => {
         const info = mongoose.connections[0];
-        console.log(`Database connected to ${info.host}:${info.port}/${info.name}`)
+        console.log(`Database connected to ${info.host}:${info.port}/${info.name}`);
+        app.listen(config.PORT, () => {
+            console.log(`Server run on port: ${config.PORT}`);
+        });
     });
 
 mongoose.connect(config.MONGO_URL, { useNewUrlParser: true });
@@ -51,17 +54,9 @@ app.use(
 
 app.use('/api', route.user)
 app.use('/api', route.login)
+app.use('/api', route.newTicket)
+app.use('/index', route.mainWindow)
 
-
-
-
-app.get('/index', (req, res) => {
-    const id = req.session.userId
-    const login = req.session.userLogin
-    const group = req.session.userGroup
-    // console.log('id: ' + id + ' | login: ' + login + ' | group: ' + group)
-    res.render('index', { user: { id: id, login: login, group: group } });
-});
 
 
 app.get('/', (req, res) => {
@@ -130,6 +125,3 @@ app.use((error, req, res, next) => {
 
 // Server listener
 
-app.listen(config.PORT, () => {
-    console.log(`Server run on port: ${config.PORT}`);
-});
